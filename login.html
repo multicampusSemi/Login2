@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find ID/PW</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Find ID/PW</h1>
+    <div class="tabs">
+      <button class="tab active" id="find-id-tab">아이디 찾기</button>
+      <button class="tab" id="find-pw-tab">비밀번호 찾기</button>
+    </div>
+
+    <!-- ID 찾기 폼 -->
+    <form class="form" id="find-id-form">
+      <div class="input-group">
+        <label>인증방법</label>
+        <div class="radio-group">
+          <input type="radio" id="email" name="auth-method-id" value="email" checked>
+          <label for="email">이메일</label>
+          <input type="radio" id="phone-number" name="auth-method-id" value="phone-number">
+          <label for="phone-number">휴대폰번호</label>
+        </div>
+      </div>
+
+      <!-- 이메일로 아이디 찾기 폼 -->
+      <div class="input-group" id="default-fields">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+      </div>
+      <div class="input-group">
+        <label for="email-search">이메일로 찾기</label>
+        <input type="email" id="email-search" name="email-search" placeholder="이메일을 입력하세요">
+      </div>
+
+      <!-- 휴대폰번호로 아이디 찾기 폼 -->
+      <div class="input-group hidden" id="phone-fields">
+        <label for="phone-number">휴대폰 번호로 찾기</label>
+        <div class="phone-input">
+          <input type="text" id="phone-part1" name="phone-part1" maxlength="3" placeholder="010">
+          <span>-</span>
+          <input type="text" id="phone-part2" name="phone-part2" maxlength="4" placeholder="1234">
+          <span>-</span>
+          <input type="text" id="phone-part3" name="phone-part3" maxlength="4" placeholder="5678">
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">확인</button>
+    </form>
+
+    <!-- 비밀번호 찾기 폼 -->
+    <form class="form hidden" id="find-pw-form">
+      <div class="input-group">
+        <label>인증방법</label>
+        <div class="radio-group">
+          <input type="radio" id="email-pw" name="auth-method-pw" value="email" checked>
+          <label for="email-pw">이메일</label>
+          <input type="radio" id="phone-number-pw" name="auth-method-pw" value="phone-number">
+          <label for="phone-number-pw">휴대폰번호</label>
+        </div>
+      </div>
+
+      <!-- 이메일로 비밀번호 찾기 폼 -->
+      <div class="input-group" id="default-fields-pw">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" placeholder="아이디를 입력하세요">
+      </div>
+      <div class="input-group" id="name-fields-pw">
+        <label for="name-pw">이름</label>
+        <input type="text" id="name-pw" name="name-pw" placeholder="이름을 입력하세요">
+      </div>
+      <div class="input-group" id="email-fields-pw">
+        <label for="email-search-pw">이메일로 찾기</label>
+        <input type="email" id="email-search-pw" name="email-search-pw" placeholder="이메일을 입력하세요">
+      </div>
+
+      <!-- 휴대폰번호로 비밀번호 찾기 폼 -->
+      <div class="input-group hidden" id="phone-fields-pw">
+        <label for="phone-number-pw">휴대폰 번호로 찾기</label>
+        <div class="phone-input">
+          <input type="text" id="phone-part1-pw" name="phone-part1-pw" maxlength="3" placeholder="010">
+          <span>-</span>
+          <input type="text" id="phone-part2-pw" name="phone-part2-pw" maxlength="4" placeholder="1234">
+          <span>-</span>
+          <input type="text" id="phone-part3-pw" name="phone-part3-pw" maxlength="4" placeholder="5678">
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">확인</button>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
